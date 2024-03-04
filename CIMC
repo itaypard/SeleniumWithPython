@@ -3,7 +3,6 @@ import time
 from selenium.webdriver.common.by import By
 
 
-
 Cimc=input("enter your Cimc ip")
 username=input("please enter your username:")
 password=input("please enter your password:")
