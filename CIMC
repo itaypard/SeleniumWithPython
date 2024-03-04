@@ -1,0 +1,43 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.by import By
+
+
+
+Cimc=input("enter your Cimc ip")
+username=input("please enter your username:")
+password=input("please enter your password:")
+
+driver1 = webdriver.Chrome()
+driver1.get(Cimc)
+driver1.maximize_window()
+driver1.find_element("id","details-button").click()
+driver1.find_element("id","proceed-link").click()
+driver1.find_element("id","LP_username").send_keys(username)
+driver1.find_element("id","LP_password").send_keys(password)
+driver1.find_element("xpath","/html/body/div/div/div[6]/div[7]/div[1]/span[1]").click()
+time.sleep(10)
+driver1.find_element("xpath","/html/body/div[1]/div/div[1]/div[1]").click()
+driver1.find_element("id","adminMenu").click()
+time.sleep(3)
+driver1.find_element("xpath","//div[@id='xwt_widget_navigation__slidemenu_MenuItem_8']/div/div[2]/a").click()
+time.sleep(3)
+driver1.find_element("xpath","//td[2]/div/div/div/div/a").click()
+time.sleep(3)
+driver1.find_element("id","CommonCMTName").send_keys("I")
+driver1.find_element("id","OrgCMTName").send_keys("israel")
+driver1.find_element("id","CMTLocality").send_keys("tel aviv")
+driver1.find_element("id","CMTStateName").send_keys("israel")
+driver1.find_element("xpath","/html/body/div[15]/div[2]/div/div[1]/div/div[2]/div/div/div/div[17]/div[2]/div/div[1]/input").click()
+time.sleep(3)
+driver1.find_element("xpath","//li[227]/div").click()
+time.sleep(2)
+driver1.find_element("id","CMTEmail").send_keys("you mail")
+driver1.find_element("id","cmtselfsign").click()
+time.sleep(3)
+driver1.find_element("xpath","//span[@id='xwt_widget_form_TextButton_12']/span[3]").click()
+time.sleep(3)
+driver1.find_element("xpath","//span[@id='xwt_widget_form_TextButton_15']/span[3]").click()
+
+while True:
+    pass
